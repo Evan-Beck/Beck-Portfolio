@@ -24,13 +24,14 @@ img {
 
 .section-container {
     display: flex;
-    align-items: center;
+    align-items: start; 
     margin-bottom: 20px;
 }
 
 .content-with-divider {
     display: flex;
-    align-items: center;
+    align-items: start; 
+    margin-left: 20px;
 }
 
 .content-with-divider p {
@@ -41,19 +42,30 @@ img {
     margin-left: 10px;
 }
 
-.about-divider {
-    width: 9px; 
-    height: 120px;
+.about-divider,
+.work-divider,
+.contact-divider {
+    width: 10px;
+    height: 200px;
     background-color: #3498db;
-    margin-left: 11px;
+}
+
+/* I grouped together all three dividers to save some space because my CSS got crowded. 
+My contact-divider was uneven, so I had to use the about id class in HTML for the contact me section.
+This is why the contact-divider is a different px. */
+
+.about-divider {
+    margin-left: 40px;
 }
 
 .work-divider {
-    width: 6px; 
-    height: 120px;
-    background-color: #3498db;
-    margin-left: 20px;
+    margin-left: 40px;
 }
+
+.contact-divider {
+    margin-right: 20px;
+}
+
 
 nav {
     display: flex;
@@ -66,6 +78,11 @@ nav ul {
     margin: 0;
     padding: 0;
 }
+
+/* The flex property on line 71, ensured that the navigation elements would be 
+flexed to the right side of the heading they are located in. I wanted the 
+elements to be in the far right because the title with my name was in the far left
+on the top of the screen.  */
 
 nav li {
     margin-right: 20px;
@@ -87,12 +104,42 @@ p {
     justify-content: flex-start;
 }
 
-h2 {
-    color: #333;
+.work-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.work-item {
-    margin-bottom: 20px;
+.work-item img {
+    /* width: 100%;
+    max-width: 200px; */
+    height: auto;
+    border: 1px solid #3498db;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.work-item img.large {
+    width: 100%;
+    max-width: 400px;
+}
+
+.work-item img.small {
+    width: 100%;
+    max-width: 215px;
+}
+
+/* I created two separate image classes for the 2 images I provided. I did this so that
+the first image, with the link to my challenge 01 would be larger than the image
+for my hypothetical project, which says coming soon.
+ I didn't know how to add the paragraph text or heading for my images to be a box,
+inside of the images like in the example portfolio shown in challenge 02.  */
+
+.work-item h3
+.work-item p {
+    margin: 0;
 }
 
 #contact {
@@ -110,9 +157,15 @@ h2 {
     margin-top: 20px;
 }
 
+/* The flex-wrap and justify-content ensured that my contact elements would be
+horizontally aligned, evenly. The last line also contains my h2 container, 
+which flexed my three sections so that the divider would not go through the headings. */
+
 #contact p {
     margin: 10px;
 }
+
+
 
 footer {
     background-color: #333;
@@ -122,4 +175,14 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+.content h2 {
+    color: #333;
+    width: 60px;
+}
+
+.h2-container {
+    display: flex;
+    align-items: center;
 }

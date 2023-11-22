@@ -10,53 +10,84 @@
 <body>
     <header>
         <h1>Evan Beck</h1>
-        <img src="headshot.jpg" alt="Evan Beck"
+        <img src="headshot.jpeg" alt="headshot">
         <nav>
             <ul>
                 <li><a href="#about">About me</a></li>
                 <li><a href="#work">Work</a></li>
                 <li><a href="#contact">Contact Me</a></li>
-                <li><a href="#resume">Resume</a></li>
+                <li><a href="https://docs.google.com/document/d/1PhDSV9W-KaiUwhglYu21XAHIc-Zi31eTodc-QZ_cE_Y/edit?usp=sharing">Resume</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="about">
+    <!-- Up until line 22, added four clickable links that navigate to their corresponding sections. Also added a headshot image that is centered in the heading banner and rounded out. -->
+
+    <section class="content" id="about">
         <div class="section-container">
-        <h2>About Me</h2>
+            <div class="h2-container">
+                <h2>About Me</h2>  
+        <div class="about-divider"></div>
+            </div>
         <div class="content-with-divider">
-            <div class="about-divider"></div>
         <p>Welcome to my official portfolio website. This website details my projects in web development, working with languages such as HTML and CSS. I am looking forward to adding my projects as I continue my full-stack software development bootcamp at the University of Pennsylvania. Later projects will include more front-end, back-end programming languages, servers and databases.</p>
     </div>
 </div>
     </section>
 
-    <section id="work">
+    <!-- I created this content class in CSS and an "about" section. This is for the About Me portion of the page, that gives a brief introduction into my software development skills. Since I have no prior experience I kept the paragraph brief. -->
+    <!-- I also added a section-container and h2-container, to stylize all H2 elements in my 3 sections. I also added a divider in each of the three sections. -->
+<!-- In the work section, I added my images and attached a link to the website from challenge 01. I did not attach a link to the second image because I have no other projects.
+ -->
+    <section class="content" id="work">
         <div class="section-container">
-        <h2>Work</h2>
+            <div class="h2-container">
+                <h2>Work</h2>
+                <div class="work-divider"></div>
+            </div>
         <div class="content-with-divider">
-            <div class="work-divider"></div>
         <div class="work-item">
             <h3>Horiseon-Refactor</h3>
             <p>HTML and CSS</p>
+            <a href="https://egamer13.github.io/Horiseon-Refactor/" target="_blank">
+                <img src="Horiseon Website.jpg" alt="Project Image 1" class="large">
+                </a>
         </div>
         <div class="work-item">
             <h3>Live NFL Stat Tracker</h3>
             <p>Full-Stack Project Coming Soon!</p>
+            <a href"#">
+                <img src="Coming Soon.jpg" alt="Project Image 2" class="small">
+                </a>
         </div>
         </div>
     </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <div class="contact-links">
+    <section class="content" id="about">
+        <div class="section-container">
+            <div class="h2-container">
+                <h2>Contact Me</h2>
+                <div class="about-divider"></div>
+            </div>
+        <div class="content-with-divider">
+        <div class="work-item">
             <p><a href="#">610-883-6109</a></p>
+            </div>
+            <div class="work-item">
             <p><a href="#">ebeck703@gmail.com</a></p>
-            <p><a href="https://github.com/Egamer13?tab=repositories">GitHub</a></p>
-            <p><a href="https://www.linkedin.com/in/evan-beck-58-?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BfBXMQe6cT%2BC%2B3a4pUTecqA%3D%3D">LinkedIn</a></p>
         </div>
+        <div class="work-item">
+            <p><a href="#">GitHub</a></p>
+        </div>
+            <div class="work-item">
+            <p><a href="#">LinkedIn</a></p>
+        </div>
+        </div>
+    </div>
     </section>
+
+    <!-- In this final section, I used the about id container, because this helped align my dividers evenly. I also linked my Github and LinkedIn. -->
 
     <footer>
         <p>&copy; 2023 Evan Beck. All rights reserved.</p>
